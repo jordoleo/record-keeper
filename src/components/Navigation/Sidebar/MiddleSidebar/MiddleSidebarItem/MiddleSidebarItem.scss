@@ -1,0 +1,27 @@
+.MiddleSidebarItem {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s; }
+  .MiddleSidebarItem:hover {
+    background-color: #8da9c4;
+    color: #303030; }
+  .MiddleSidebarItem .Icon {
+    font-size: 15px; }
+  .MiddleSidebarItem .LinkTitle {
+    font-size: 10px; }
+
+
+
+// WEBPACK FOOTER //
+// ./src/components/Navigation/Sidebar/MiddleSidebar/MiddleSidebarItem/MiddleSidebarItem.scss

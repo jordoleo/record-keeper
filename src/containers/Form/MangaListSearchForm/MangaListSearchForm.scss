@@ -1,0 +1,15 @@
+.MangaListSearchFormContainer {
+  margin: 0 auto;
+  width: 500px; }
+  .MangaListSearchFormContainer .MangaListSearchForm .append {
+    width: 50px; }
+  .MangaListSearchFormContainer .MangaListSearchForm label {
+    width: 100%;
+    text-align: center; }
+  .MangaListSearchFormContainer .MangaListSearchForm .mb-3 > div:first-child {
+    width: calc(100% - 50px); }
+
+
+
+// WEBPACK FOOTER //
+// ./src/containers/Form/MangaListSearchForm/MangaListSearchForm.scss

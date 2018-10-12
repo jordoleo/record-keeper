@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.load-more {
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 auto; }
+  .load-more:before {
+    content: '◄';
+    padding: 5px; }
+  .load-more:after {
+    content: '►';
+    padding: 5px; }
+
+.result-title {
+  padding: 10px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: center;
+  margin-top: 50px; }
+
+
+
+// WEBPACK FOOTER //
+// ./src/containers/Manga/Manga.scss

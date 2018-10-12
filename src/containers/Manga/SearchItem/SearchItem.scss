@@ -1,0 +1,54 @@
+.SearchItem {
+  padding: 10px;
+  margin: 10px 5px;
+  border: 3px solid #375a7f;
+  border-radius: 10px;
+  position: relative; }
+  .SearchItem .show-more {
+    font-size: 12px;
+    cursor: pointer;
+    color: #8da9c4; }
+  .SearchItem .image-container {
+    width: 100px;
+    display: inline-block;
+    text-align: center; }
+    .SearchItem .image-container img {
+      width: 100px;
+      height: auto; }
+    .SearchItem .image-container button {
+      font-size: 10px;
+      margin: 10px 0; }
+    .SearchItem .image-container .type {
+      font-size: 12px; }
+  .SearchItem .description-container {
+    display: inline-block;
+    width: calc(100% - 100px);
+    padding-left: 10px;
+    padding-bottom: 15px;
+    vertical-align: top; }
+    .SearchItem .description-container .title {
+      font-size: 15px; }
+    .SearchItem .description-container hr {
+      background-color: white;
+      margin: 10px 0; }
+    .SearchItem .description-container .description {
+      font-size: 12px; }
+    .SearchItem .description-container table tr td:first-child {
+      width: 300px; }
+  .SearchItem .genre-container {
+    font-size: 10px;
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    bottom: 5px; }
+    .SearchItem .genre-container .genre {
+      display: inline-block;
+      padding: 3px;
+      margin: 0 3px;
+      background-color: #375a7f;
+      border-radius: 10px; }
+
+
+
+// WEBPACK FOOTER //
+// ./src/containers/Manga/SearchItem/SearchItem.scss
