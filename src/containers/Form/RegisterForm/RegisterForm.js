@@ -99,6 +99,10 @@ class RegisterForm extends Component {
         if(this.props.error) {
             error = <div className="Auth-error">{this.props.error}</div>
         }
+        let message = null;
+        if(this.props.message) {
+            message = <div className="Auth-success">{this.props.message}</div>
+        }
         return (
             <div className="RegisterForm card text-white bg-primary">
                 <div className="card-header">
@@ -109,7 +113,9 @@ class RegisterForm extends Component {
                         {form}
                         <Button className="btn btn-light">Register</Button>
                     </Form>
+                    <br/>
                     {error}
+                    {message}
                 </div>
             </div>
         );
@@ -118,7 +124,8 @@ class RegisterForm extends Component {
 
 const mapStateToProps = state => {
     return {
-        error: state.auth.get('error')
+        error: state.auth.get('error'),
+        message: state.auth.get('message')
     };
 };
 

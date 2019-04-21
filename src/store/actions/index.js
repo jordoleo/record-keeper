@@ -10,7 +10,8 @@ export {
     authLoading,
     authInit,
     authInitSaga,
-    authErrorClear
+    authErrorClear,
+    authRegisterSuccess
 } from './auth';
 
 export {

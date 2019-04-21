@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://api.jordanleonardi.com/api/manga',
+    baseURL: 'http://localhost:8000/api/manga',
 });
 
 export default instance;

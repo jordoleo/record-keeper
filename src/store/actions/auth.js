@@ -59,3 +59,9 @@ export const authErrorClear = () => {
         type: actionTypes.AUTH_ERROR_CLEAR
     }
 };
+
+export const authRegisterSuccess = () => {
+    return {
+        type: actionTypes.AUTH_REGISTER_SUCCESS
+    }
+};

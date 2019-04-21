@@ -5,7 +5,8 @@ const initialState = Map({
     token: null,
     error: null,
     loading: false,
-    details: {}
+    details: {},
+    message: null
 });
 
 const authSuccess = (state, action) => {
@@ -18,7 +19,8 @@ const authSuccess = (state, action) => {
 const authError = (state, action) => {
     return state.merge({
         error: action.error,
-        loading: false
+        loading: false,
+        message: null
     });
 };
 
@@ -32,12 +34,23 @@ const authLogout = (state, action) => {
 const authLoading = (state, action) => {
     return state.merge({
         loading: true,
-        error: null
+        error: null,
+        message: null
     });
 };
 
 const authErrorClear = (state, action) => {
-    return state.set('error', null);
+    return state.merge({
+        error: null,
+        message: null
+    });
+};
+
+const authRegisterSuccess = (state, action) => {
+    return state.merge({
+        loading: false,
+        message: "Register Success! Please verify your email first"
+    });
 };
 
 const reducer = (state = initialState, action) => {
@@ -47,6 +60,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.AUTH_LOGOUT: return authLogout(state, action);
         case actionTypes.AUTH_LOADING: return authLoading(state, action);
         case actionTypes.AUTH_ERROR_CLEAR: return authErrorClear(state, action);
+        case actionTypes.AUTH_REGISTER_SUCCESS: return authRegisterSuccess(state, action);
         default: return state;
     }
 };

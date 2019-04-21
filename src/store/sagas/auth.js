@@ -6,9 +6,9 @@ export function* authRegisterSaga(action) {
     yield put(actions.authLoading());
     const registerData = action.registerData;
     try {
-        const response = yield axios.post('/register', registerData);
-        const token = response.data.success.token;
-        yield put(actions.authSuccess(token));
+        yield axios.post('/register', registerData);
+        // const token = response.data.success.token;
+        yield put(actions.authRegisterSuccess());
     } catch(error) {
         let message = 'Server error';
         if(error.response) {
@@ -32,7 +32,7 @@ export function* authLoginSaga(action) {
         if(error.response.status === 422) {
             message = 'Email does not exists';
         } else if(error.response.status === 401) {
-            message = 'Wrong Password';
+            message = 'Wrong Password or Unverified Account';
         }
         yield put(actions.authError(message));
     }
